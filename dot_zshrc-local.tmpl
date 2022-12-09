@@ -1,0 +1,4 @@
+export GCP_COMPUTE_SERVICE_ACCOUNT_PASSWORD="{{ (bitwardenFields "item" "SVT-env").GCP_COMPUTE_SERVICE_ACCOUNT_PASSWORD.value }}"
+export ARTIFACTORY_READONLY_PASSWORD="{{ (bitwardenFields "item" "SVT-env").ARTIFACTORY_READONLY_PASSWORD.value }}"
+export SVT_NPM_READONLY_AUTH="{{ (bitwardenFields "item" "SVT-env").SVT_NPM_READONLY_AUTH.value }}"
+export SVT_NPM_DEPLOY_AUTH="{{ (bitwardenFields "item" "SVT-env").SVT_NPM_DEPLOY_AUTH.value }}"
