@@ -15,6 +15,9 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+# Ignore case
+bind 'set completion-ignore-case on'
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -59,3 +62,5 @@ export PATH="/Users/jow2/.rd/bin:$PATH"
 
 eval "$(starship init bash)"
 source ~/.local/share/blesh/ble.sh
+
+source ~/.bashrc_local
