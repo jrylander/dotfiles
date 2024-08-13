@@ -56,11 +56,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 eval "$(direnv hook bash)"
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/jow2/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 eval "$(starship init bash)"
-source ~/.local/share/blesh/ble.sh
 
 source ~/.bashrc_local
