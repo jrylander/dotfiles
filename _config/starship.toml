@@ -1,11 +1,25 @@
-[gcloud]
-disabled = true
-
-[rust]
-disabled = true
-
-[nix_shell]
-disabled = true
-
-[kubernetes]
-disabled = false
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$java\
+$lua\
+$nodejs\
+$perl\
+$php\
+$python\
+$ruby\
+$rust\
+$scala\
+$direnv\
+$env_var\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$shell\
+$character"""
