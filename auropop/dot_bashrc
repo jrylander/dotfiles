@@ -105,6 +105,7 @@ alias l='ls -CF'
 
 alias dev="k9s --context dev.aurora"
 alias app="k9s --context app.aurora"
+alias svt='sudo CISCO_SPLIT_INC="" openconnect --authgroup SVTVPN -u jow2 asavpn.svt.se'
 
 export EDITOR=vim
 
