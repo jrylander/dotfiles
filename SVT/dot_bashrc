@@ -53,12 +53,13 @@ alias app="k9s --context app.aurora"
 
 export EDITOR=vim
 
-export PATH=/nix/var/nix/profiles/default/bin:$PATH
-
 [ -s "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 [ -s "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -79,5 +80,7 @@ fi
 eval "$(direnv hook bash)"
 
 eval "$(starship init bash)"
+
+export PATH="/Users/jow2/bin:$PATH"
 
 source ~/.bashrc_local
