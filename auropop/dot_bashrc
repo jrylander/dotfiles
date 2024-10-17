@@ -105,8 +105,14 @@ alias l='ls -CF'
 
 alias dev="k9s --context dev.aurora"
 alias app="k9s --context app.aurora"
+# Nice try, no go:
+# alias svt='sudo CISCO_SPLIT_INC="" openconnect --authgroup SVTVPN -u jow2 asavpn.svt.se'
 
 export EDITOR=vim
+
+export PATH=$HOME/bin:$PATH
+
+eval "$(direnv hook bash)"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -126,3 +132,11 @@ source ~/.local/share/blesh/ble.sh
 
 source ~/.bashrc_local
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
