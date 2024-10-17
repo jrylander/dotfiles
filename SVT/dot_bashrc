@@ -55,8 +55,24 @@ export EDITOR=vim
 
 [ -s "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
+####
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+function nvmrc_check() {
+  if [[ -f .nvmrc ]]
+  then
+    nvm use
+  fi
+}
+
+function cd() {
+  builtin cd "$@"
+  nvmrc_check
+}
+
+nvmrc_check
+####
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -80,6 +96,7 @@ fi
 eval "$(direnv hook bash)"
 
 eval "$(starship init bash)"
+source ~/.local/share/blesh/ble.sh
 
 export PATH="/Users/jow2/bin:$PATH"
 
