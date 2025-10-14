@@ -119,13 +119,34 @@ if ! shopt -oq posix; then
   fi
 fi
 
+####
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+function nvmrc_check() {
+  if [[ -f .nvmrc ]]
+  then
+    nvm use
+  fi
+}
+
+function cd() {
+  builtin cd "$@"
+  nvmrc_check
+}
+
+nvmrc_check
+####
+
 . "$HOME/.cargo/env"
+
+export PATH=$PATH:/usr/local/go/bin
 
 eval "$(starship init bash)"
 source ~/.local/share/blesh/ble.sh
 
 source ~/.bashrc_local
-
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
