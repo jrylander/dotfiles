@@ -1,4 +1,15 @@
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+### Needed for non-interactive shells (Codex commands)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+nvm use default >/dev/null 2>&1 || true
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+###
+
+# Interactive shells get the whole .bashrc
 case "$-" in *i*) if [ -r ~/.bashrc ]; then . ~/.bashrc; fi;; esac
+. "$HOME/.cargo/env"
