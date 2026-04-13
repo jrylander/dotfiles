@@ -1,0 +1,32 @@
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
+
+[projects."/Users/jow2/Source/Uno/uno-auth-api/main"]
+trust_level = "trusted"
+
+[projects."/Users/jow2/Source/Achievements/uno-user-achievements"]
+trust_level = "trusted"
+
+[projects."/Users/jow2/Source/Uno/uno-auth-api/uno-auth-api-main"]
+trust_level = "trusted"
+
+[projects."/Users/jow2"]
+trust_level = "trusted"
+
+[projects."/Users/jow2/Source/Uno/uno-auth-api"]
+trust_level = "trusted"
+
+[projects."/Users/jow2/Source/Uno/service-amigo-api/service-amigo-api-main"]
+trust_level = "trusted"
+
+[projects."/Users/jow2/Source/DuoEngage/duo-engage-api/duo-engage-api-main"]
+trust_level = "trusted"
+
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+enabled = true
+env_vars = ["SVT_NPM_READONLY_AUTH"]
+
+[mcp_servers.context7.env]
+CONTEXT7_API_KEY = "ctx7sk-c73b1fa0-c1aa-428c-bfdb-ba615278ea0f"
